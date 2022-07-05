@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/style/style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
-    <script defer src="/src/js/main.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="/src/style/style.scss">
+    <script type="module" defer src="/src/js/main.js"></script>
+    <title>Portfolio</title>
 </head>
 <body>
     <main>
@@ -106,17 +105,23 @@
         <p>Front-end developer who cares deeply about user experience. Serious passion for UI design and new technologies.        </p>
     </section>
     <section class="skills">
-        
-        <h1 class="h-skills">SKILLS</h1>
-        <ul>
-            <li><p>HTML</p></li>
-            <li><p>CSS</p></li>
-            <li><p>SASS</p></li>
-            <li><p>JavaScript</p></li>
-            <li><p>TypeScript</p></li>
-        </ul>
+      <h1 class="h-skills">SKILLS</h1>
+        <div class="inner-skills">
+          <ul>
+              <li>HTML</li>
+              <li>CSS3/SASS</li>
+              <!-- <li><p>SASS</p></li> -->
+              <li>JavaScript (ES6+)</li>
+              <!-- <li><p>TypeScript</p></li> -->
+              <li>WordPress</li>
+              <li>Figma</li>
+              <li>Git</li>
+  
+          </ul>
+        </div>
     </section>
     <section class="contact">
+      <div class="inner-contact">
         <h1 class="h-contact">CONTACT</h1>
         <div class="social">
             <a href="">
@@ -132,6 +137,7 @@
                 <img src="/src/img/linkedin.svg" alt="linkedin-icon">
             </a>
         </div>
+      </div>
     </section>
 </body>
 </html>

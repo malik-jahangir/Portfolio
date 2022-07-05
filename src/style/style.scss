@@ -1,85 +1,229 @@
-:root{
+:root {
     --color-primary: black;
-    --color-background:white;
-    --heading-color1:rgb(238, 238, 238);
-    --heading-color2:rgb(34, 34, 34);
+    --color-background: white;
+    --heading-color1: rgb(238, 238, 238);
+    --heading-color2: rgb(34, 34, 34);
 }
+
 @font-face {
     font-family: 'AvenirLight';
-    src: url('/src/fonts/Avenir/Avenir-Light.ttf');
-    }
-    
-    @font-face {
+    src: url('../fonts/Avenir-Light.ttf');
+}
+
+@font-face {
     font-family: 'AvenirRoman';
-    src: url('/src/fonts/Avenir-Roman.ttf');
-    }
-    
-    @font-face {
+    src: url('../fonts/Avenir-Roman.ttf');
+}
+
+@font-face {
     font-family: 'AvenirBook';
-    src: url('/src/fonts/Avenir/Avenir-Book.ttf');
-    }
-    
-    @font-face {
+    src: url('../fonts/Avenir-Book.ttf');
+}
+
+@font-face {
     font-family: 'AvenirMedium';
-    src: url('/src/fonts/Avenir/Avenir-Medium.ttf');
-    }
-    
-    @font-face {
+    src: url('../fonts/Avenir-Medium.ttf');
+}
+
+@font-face {
     font-family: 'AvenirHeavy';
-    src: url('/src/fonts/Avenir/Avenir-Heavy.ttf');
-    }
-*{
+    src: url('../fonts/Avenir-Heavy.ttf');
+}
+
+* {
     margin: 0;
     padding: 0;
+    // background-color: rgba($color: #000000, $alpha: .3);
 }
-body{
+
+body {
     background-color: var(--color-background);
+
 }
-p{
+
+p {
     font-size: 25px;
     color: var(--color-primary);
+
 }
-h1{
-    font-size: 180px;
-    color:var(--heading-color1);
+
+h1 {
+    font-size: 200px;
+    color: var(--heading-color1);
+    font-family: AvenirHeavy;
+
 }
-h2{
+
+h2 {
     font-size: 70px;
     color: var(--heading-color2);
 }
+
 ////////handwriting animation
 .name-svg {
     width: 500px;
-  }
-  #vector {
+}
+
+#vector {
     stroke: white;
     stroke-width: 3;
     stroke-dasharray: 1532.29;
     stroke-dashoffset: 1532.29;
-    animation: text-animation 4s linear forwards;
-    animation-delay: 1s;
-  }
-  #text-path {
+    animation: text-animation 2s linear forwards;
+    animation-delay: .5s;
+}
+
+#text-path {
     fill: rgb(34, 34, 34);
-  }
-  @keyframes text-animation {
+}
+
+@keyframes text-animation {
     to {
-      stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
-  }
+}
+
 ////////////////
-main{
+main {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .des{
-        margin-top: 10px;
-        p{
+
+    .des {
+        margin-top: 2px;
+        margin-left: 10px;
+        width: 740px;
+        height: 80px;
+        overflow: hidden;
+        position: relative;
+
+        p {
+            // bottom: -100px;
+            position: absolute;
             font-size: 50px;
             font-family: AvenirRoman;
+            transform: translateY(100);
+            animation: p-animation 0.40s ease forwards;
+            animation-delay: 2.55s;
+        }
+        @keyframes p-animation {
+            0%{
+                transform: translateY(80);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        
         }
     }
+}
+
+section.about {
+    background-color:rgba($color: red, $alpha: .2);
+    height: 100vh;
+    // width: 100vw;
+    overflow: hidden;
+    padding-top: 100px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    position: relative;
+
+    h1 {
+        position: absolute;
+        // transform: translate(-1000px, 0px);
+        left: -220;
+        z-index: -1;
+    }
+
+    p {
+        font-family: AvenirLight;
+        font-size: 38px;
+        margin-right: 5%;
+        margin-left: 30%;
+        margin-top: 120px;
+    }
+
+}
+
+section.skills {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color:rgba($color: blue, $alpha: .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+    h1{
+        position: absolute;
+        // transform: translate(-1000px, 0px);
+        right: -220;
+        z-index: -1;
+    }
+    .inner-skills{
+      width:750px;
+        ul{
+           display: grid;
+           grid-template-columns: repeat(2, auto);
+        //    max-width: 1000px;
+            // margin: auto;
+            padding-bottom: 400px;
+           justify-content: space-between;
+    // grid-template-rows: repeat(3, auto);
+    
+            li{
+                list-style: none;
+                font-family:AvenirRoman;
+                font-size: 40px;
+                margin-bottom: 4px;
+    
+                
+            }
+        }
+    }
+  
+
+
+}
+
+section.contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color:rgba($color: green, $alpha: .2);
+
+    .inner-contact {
+        width: 100%;
+        padding-bottom: 10%;
+        h1 {
+            position: absolute;
+            left: -220;
+            z-index: -1;
+        }
+
+        .social {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            margin: 0 6%;
+            height: 210px;
+
+            a {
+
+                // margin: 0 20px;
+                img {
+                    width: 90px;
+                }
+            }
+        }
+    }
+
+
 }

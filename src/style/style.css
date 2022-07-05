@@ -7,23 +7,23 @@
 
 @font-face {
   font-family: "AvenirLight";
-  src: url("/src/fonts/Avenir/Avenir-Light.ttf");
+  src: url("../fonts/Avenir-Light.ttf");
 }
 @font-face {
   font-family: "AvenirRoman";
-  src: url("/src/fonts/Avenir-Roman.ttf");
+  src: url("../fonts/Avenir-Roman.ttf");
 }
 @font-face {
   font-family: "AvenirBook";
-  src: url("/src/fonts/Avenir/Avenir-Book.ttf");
+  src: url("../fonts/Avenir-Book.ttf");
 }
 @font-face {
   font-family: "AvenirMedium";
-  src: url("/src/fonts/Avenir/Avenir-Medium.ttf");
+  src: url("../fonts/Avenir-Medium.ttf");
 }
 @font-face {
   font-family: "AvenirHeavy";
-  src: url("/src/fonts/Avenir/Avenir-Heavy.ttf");
+  src: url("../fonts/Avenir-Heavy.ttf");
 }
 * {
   margin: 0;
@@ -58,10 +58,8 @@ h2 {
   stroke-width: 3;
   stroke-dasharray: 1532.29;
   stroke-dashoffset: 1532.29;
-  -webkit-animation: text-animation 4s linear forwards;
-          animation: text-animation 4s linear forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation: text-animation 3s linear forwards;
+          animation: text-animation 3s linear forwards;
 }
 
 #text-path {
