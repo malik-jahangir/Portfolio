@@ -273,12 +273,12 @@ section.work {
 }
 
 .screenshot-tab-f {
-  width: 365px;
+  width: 366px;
   z-index: 2;
   border-radius: 2px;
   position: absolute;
-  top: 19px;
-  left: 19px;
+  top: 17px;
+  left: 18px;
 }
 
 section.skills {

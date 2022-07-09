@@ -581,7 +581,7 @@ var _locomotiveScrollDefault = parcelHelpers.interopDefault(_locomotiveScroll);
     scrollTrigger: {
         trigger: ".screenshot-ft",
         // markers: true,
-        start: "10% 50%",
+        start: "12% 50%",
         end: "0% 12%",
         // pin: true,   // pin the trigger element while active,
         scrub: 1
@@ -609,7 +609,7 @@ var _locomotiveScrollDefault = parcelHelpers.interopDefault(_locomotiveScroll);
         start: "50% bottom",
         end: "+=200",
         // pin: true,   // pin the trigger element while active,
-        scrub: 3
+        scrub: 2
     },
     y: "-130",
     duration: 2

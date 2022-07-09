@@ -54,7 +54,7 @@ gsap.to(".h-about", {
     scrollTrigger:{
         trigger:'.screenshot-ft',
         // markers: true,
-        start: "10% 50%", // when the top of the trigger hits the top of the viewport
+        start: "12% 50%", // when the top of the trigger hits the top of the viewport
       end: "0% 12%", // end after scrolling 500px beyond the start
         // pin: true,   // pin the trigger element while active,
         scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
@@ -87,7 +87,7 @@ gsap.to(".h-about", {
         start: "50% bottom", // when the top of the trigger hits the top of the viewport
       end: "+=200", // end after scrolling 500px beyond the start
         // pin: true,   // pin the trigger element while active,
-        scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     }, // start the animation when ".box" enters the viewport (once)
     y: "-130",
     duration:2,
