@@ -1,8 +1,8 @@
 :root {
   --color-primary: black;
-  --color-background:white;
-  --heading-color1:rgb(238, 238, 238);
-  --heading-color2:rgb(34, 34, 34);
+  --color-background: white;
+  --heading-color1: rgb(238, 238, 238);
+  --heading-color2: rgb(34, 34, 34);
 }
 
 @font-face {
@@ -36,17 +36,31 @@ body {
 
 p {
   font-size: 25px;
-  color: var(--color-primary);
+  color: var(--heading-color2);
 }
 
 h1 {
-  font-size: 180px;
+  font-size: 200px;
   color: var(--heading-color1);
+  font-family: AvenirHeavy;
 }
 
 h2 {
-  font-size: 70px;
+  font-size: 80px;
   color: var(--heading-color2);
+  font-family: AvenirHeavy;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }
 
 .name-svg {
@@ -58,8 +72,10 @@ h2 {
   stroke-width: 3;
   stroke-dasharray: 1532.29;
   stroke-dashoffset: 1532.29;
-  -webkit-animation: text-animation 3s linear forwards;
-          animation: text-animation 3s linear forwards;
+  -webkit-animation: text-animation 2s linear forwards;
+          animation: text-animation 2s linear forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 #text-path {
@@ -86,9 +102,249 @@ main {
   justify-content: center;
 }
 main .des {
-  margin-top: 10px;
+  margin-top: 2px;
+  margin-left: 10px;
+  width: 740px;
+  height: 80px;
+  overflow: hidden;
+  position: relative;
 }
 main .des p {
+  position: absolute;
   font-size: 50px;
   font-family: AvenirRoman;
+  transform: translateY(100);
+  -webkit-animation: p-animation 0.4s ease forwards;
+          animation: p-animation 0.4s ease forwards;
+  -webkit-animation-delay: 2.55s;
+          animation-delay: 2.55s;
+}
+@-webkit-keyframes p-animation {
+  0% {
+    transform: translateY(80);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes p-animation {
+  0% {
+    transform: translateY(80);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+section.about {
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 100px;
+  position: relative;
+}
+section.about h1 {
+  position: absolute;
+  left: -220;
+  z-index: -1;
+}
+section.about p {
+  font-family: AvenirLight;
+  font-size: 38px;
+  margin-right: 5%;
+  margin-left: 30%;
+  margin-top: 120px;
+}
+
+section.work {
+  padding: 0 5vw;
+}
+
+.project {
+  height: 1800px;
+  position: relative;
+}
+
+.project-number {
+  font-family: AvenirHeavy;
+  font-size: 30px;
+  color: var(--heading-color2);
+}
+
+.project-description {
+  position: absolute;
+  position: fixed;
+  top: 3vw;
+  left: 3vw;
+  max-width: 40%;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.inner-project-description {
+  padding-top: 200px;
+  padding-left: 4vw;
+}
+.inner-project-description p {
+  font-family: AvenirBook;
+  font-size: 30px;
+}
+
+.project-des {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.project-des p {
+  font-size: 30px;
+  font-family: AvenirMedium;
+}
+
+.project-description-icons {
+  margin-left: 10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-description-icons a {
+  text-decoration: none;
+  color: var(--heading-color2);
+  padding: 5px;
+}
+.project-description-icons a svg {
+  width: 18px;
+}
+
+.project-mockups {
+  position: absolute;
+  top: 200px;
+  right: 20px;
+}
+
+.img-container {
+  position: relative;
+  width: 800px;
+  height: 440px;
+  overflow: hidden;
+}
+
+.mockup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 1.5;
+  z-index: 100;
+  width: 800px;
+}
+
+.screenshot-ft {
+  position: absolute;
+  top: 19;
+  border-radius: 2px;
+  left: 100.3px;
+  width: 603.3px;
+}
+
+.project-mockups-tab {
+  position: absolute;
+  top: 780px;
+  right: 420px;
+  z-index: 100;
+}
+
+.project-mockups-tab2 {
+  position: absolute;
+  top: 820px;
+  right: 10px;
+  z-index: 100;
+}
+
+.img-container-tab {
+  position: relative;
+  width: 400px;
+  height: 679px;
+  overflow: hidden;
+}
+
+.mockup-tab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 1.5;
+  z-index: 100;
+  width: 400px;
+}
+
+.screenshot-tab-f {
+  position: absolute;
+  top: 19;
+  border-radius: 2px;
+  left: 19px;
+  width: 365px;
+  z-index: 2;
+}
+
+section.skills {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
+}
+section.skills h1 {
+  position: absolute;
+  right: -220;
+  z-index: -1;
+}
+section.skills .inner-skills {
+  width: 750px;
+}
+section.skills .inner-skills ul {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding-bottom: 400px;
+  justify-content: space-between;
+}
+section.skills .inner-skills ul li {
+  list-style: none;
+  font-family: AvenirRoman;
+  font-size: 40px;
+  margin-bottom: 4px;
+  color: var(--heading-color2);
+}
+
+section.contact {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+section.contact .inner-contact {
+  width: 100%;
+  padding-bottom: 10%;
+}
+section.contact .inner-contact h1 {
+  position: absolute;
+  left: -220;
+  z-index: -1;
+}
+section.contact .inner-contact .social {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin: 0 6%;
+  height: 210px;
+}
+section.contact .inner-contact .social a img {
+  width: 90px;
+}
+
+.op100 {
+  opacity: 100;
 }/*# sourceMappingURL=style.css.map */

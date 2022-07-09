@@ -40,7 +40,7 @@ body {
 }
 
 p {
-  color: var(--color-primary);
+  color: var(--heading-color2);
   font-size: 25px;
 }
 
@@ -52,7 +52,20 @@ h1 {
 
 h2 {
   color: var(--heading-color2);
-  font-size: 70px;
+  font-family: AvenirHeavy;
+  font-size: 80px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }
 
 .name-svg {
@@ -117,7 +130,6 @@ main .des p {
 
 section.about {
   height: 100vh;
-  background-color: #f003;
   padding-top: 100px;
   position: relative;
   overflow: hidden;
@@ -137,9 +149,140 @@ section.about p {
   font-size: 38px;
 }
 
+section.work {
+  padding: 0 5vw;
+}
+
+.project {
+  height: 1800px;
+  position: relative;
+}
+
+.project-number {
+  color: var(--heading-color2);
+  font-family: AvenirHeavy;
+  font-size: 30px;
+}
+
+.project-description {
+  max-width: 40%;
+  opacity: 0;
+  transition: all .2s;
+  position: fixed;
+  top: 3vw;
+  left: 3vw;
+}
+
+.inner-project-description {
+  padding-top: 200px;
+  padding-left: 4vw;
+}
+
+.inner-project-description p {
+  font-family: AvenirBook;
+  font-size: 30px;
+}
+
+.project-des {
+  align-items: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+.project-des p {
+  font-family: AvenirMedium;
+  font-size: 30px;
+}
+
+.project-description-icons {
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 10px;
+  display: flex;
+}
+
+.project-description-icons a {
+  color: var(--heading-color2);
+  padding: 5px;
+  text-decoration: none;
+}
+
+.project-description-icons a svg {
+  width: 18px;
+}
+
+.project-mockups {
+  position: absolute;
+  top: 200px;
+  right: 20px;
+}
+
+.img-container {
+  width: 800px;
+  height: 440px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mockup {
+  z-index: 100;
+  width: 800px;
+  position: absolute;
+  top: 0;
+  left: 1.5px;
+  right: 0;
+}
+
+.screenshot-ft {
+  width: 603.3px;
+  border-radius: 2px;
+  position: absolute;
+  top: 19px;
+  left: 100.3px;
+}
+
+.project-mockups-tab {
+  z-index: 100;
+  position: absolute;
+  top: 780px;
+  right: 420px;
+}
+
+.project-mockups-tab2 {
+  z-index: 100;
+  position: absolute;
+  top: 820px;
+  right: 10px;
+}
+
+.img-container-tab {
+  width: 400px;
+  height: 679px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mockup-tab {
+  z-index: 100;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 1.5px;
+  right: 0;
+}
+
+.screenshot-tab-f {
+  width: 365px;
+  z-index: 2;
+  border-radius: 2px;
+  position: absolute;
+  top: 19px;
+  left: 19px;
+}
+
 section.skills {
   height: 100vh;
-  background-color: #00f3;
   justify-content: center;
   align-items: center;
   padding-top: 200px;
@@ -166,6 +309,7 @@ section.skills .inner-skills ul {
 }
 
 section.skills .inner-skills ul li {
+  color: var(--heading-color2);
   margin-bottom: 4px;
   font-family: AvenirRoman;
   font-size: 40px;
@@ -174,7 +318,6 @@ section.skills .inner-skills ul li {
 
 section.contact {
   height: 100vh;
-  background-color: #00800033;
   align-items: center;
   display: flex;
   position: relative;
@@ -201,6 +344,10 @@ section.contact .inner-contact .social {
 
 section.contact .inner-contact .social a img {
   width: 90px;
+}
+
+.op100 {
+  opacity: 100;
 }
 
 /*# sourceMappingURL=index.08963856.css.map */
