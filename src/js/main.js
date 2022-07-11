@@ -70,7 +70,7 @@ gsap.to(".h-about", {
         trigger:'.project-mockups',
         markers: true,
         start: "10% top", // when the top of the trigger hits the top of the viewport
-      end: "+=200", // end after scrolling 500px beyond the start
+      end: "+=400", // end after scrolling 500px beyond the start
         // pin: true,   // pin the trigger element while active,
         scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     }, // start the animation when ".box" enters the viewport (once)
@@ -85,7 +85,7 @@ gsap.to(".h-about", {
         trigger:'.project-mockups-tab',
         markers: true,
         start: "50% bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=200", // end after scrolling 500px beyond the start
+      end: "+=600", // end after scrolling 500px beyond the start
         // pin: true,   // pin the trigger element while active,
         scrub: 2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     }, // start the animation when ".box" enters the viewport (once)
@@ -100,7 +100,7 @@ gsap.to(".h-about", {
         trigger:'.project-mockups-tab2',
         markers: true,
         start: "60% bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=200", // end after scrolling 500px beyond the start
+      end: "+=600", // end after scrolling 500px beyond the start
         // pin: true,   // pin the trigger element while active,
         scrub: 3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     }, // start the animation when ".box" enters the viewport (once)
@@ -144,14 +144,37 @@ gsap.to(".h-about", {
   // });
 
   const opToggle = function(el){
-    console.log('toggle')
-    el.classList.toggle('op100');
+      el.classList.toggle('op100');
   }
-  const projectDescription = document.querySelector('.project-description');
+
+  const overlay1 = document.querySelectorAll('#overlay1');
+  const overlay2 = document.querySelectorAll('#overlay2');
+  
+  const projectDescription1 = document.querySelector('.project-description1');
+  const projectDescription2 = document.querySelector('.project-description2');
   const projectMockup = document.querySelector('.project-mockups')
   ScrollTrigger.create({
-    trigger: ".project",
+    trigger: ".project1",
     start: "top center",
     end: "+=1500",
-    onToggle: self =>  opToggle(projectDescription)
+    onToggle: self => {
+      opToggle(projectDescription1)
+      overlay1.forEach((e)=>{
+        // console.log(e)
+        e.classList.toggle('overlay')
+      })
+    }
+  });
+
+  ScrollTrigger.create({
+    trigger: ".project2",
+    start: "top center",
+    end: "+=1500",
+    onToggle: self => {
+      opToggle(projectDescription2)
+      overlay2.forEach((e)=>{
+        // console.log(e)
+        e.classList.toggle('overlay')
+      })
+    }
   });

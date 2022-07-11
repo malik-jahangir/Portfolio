@@ -158,6 +158,40 @@ section.work {
   position: relative;
 }
 
+.overlay {
+  width: fit-content;
+  animation-delay: .5s;
+  position: relative;
+}
+
+.overlay:after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #222;
+  animation: overlay 1s cubic-bezier(.19, 1, .22, 1) forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes overlay {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+
 .project-number {
   color: var(--heading-color2);
   font-family: AvenirHeavy;

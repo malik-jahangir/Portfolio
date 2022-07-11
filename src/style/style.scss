@@ -176,10 +176,51 @@ section.work{
 }
 .project{
     height: 1800px;
+    // margin-bottom: 200px;
     position: relative;
     // background-color: rgba(purple, $alpha: .2);
     
 }
+.overlay{
+    position: relative;
+    // color: #FFF;
+    // animation: text 0.0001s linear forwards;
+    animation-delay:0.5s ;
+    width: fit-content;
+    &::after{
+        content: "";
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        background: rgb(34, 34, 34);
+        animation: overlay 1s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal forwards running;
+    }
+}
+
+@keyframes overlay {
+    0%{
+        left: 0;
+        width: 0%
+    }
+    50%{
+        left:0%;
+        width:100%
+    }
+    100%{
+        left:100%;
+        width:0%
+    }
+}
+// @keyframes text {
+//     0%{
+//         color: #FFF;
+//       }
+//       100%{
+//         color: #333;
+//       }
+// }
 .project-number{
     font-family: AvenirHeavy;
     font-size: 30px;
@@ -360,7 +401,6 @@ section.work{
 //     z-index: 2;
 //     // transform: translateY(-687);
 // }
-
 
 ///////////////////////
 section.skills {

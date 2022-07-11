@@ -595,7 +595,7 @@ var _locomotiveScrollDefault = parcelHelpers.interopDefault(_locomotiveScroll);
         trigger: ".project-mockups",
         markers: true,
         start: "10% top",
-        end: "+=200",
+        end: "+=400",
         // pin: true,   // pin the trigger element while active,
         scrub: 3
     },
@@ -607,7 +607,7 @@ var _locomotiveScrollDefault = parcelHelpers.interopDefault(_locomotiveScroll);
         trigger: ".project-mockups-tab",
         markers: true,
         start: "50% bottom",
-        end: "+=200",
+        end: "+=600",
         // pin: true,   // pin the trigger element while active,
         scrub: 2
     },
@@ -619,7 +619,7 @@ var _locomotiveScrollDefault = parcelHelpers.interopDefault(_locomotiveScroll);
         trigger: ".project-mockups-tab2",
         markers: true,
         start: "60% bottom",
-        end: "+=200",
+        end: "+=600",
         // pin: true,   // pin the trigger element while active,
         scrub: 3
     },
@@ -653,16 +653,36 @@ var _locomotiveScrollDefault = parcelHelpers.interopDefault(_locomotiveScroll);
 //   // ease: "none",
 // });
 const opToggle = function(el) {
-    console.log("toggle");
     el.classList.toggle("op100");
 };
-const projectDescription = document.querySelector(".project-description");
+const overlay1 = document.querySelectorAll("#overlay1");
+const overlay2 = document.querySelectorAll("#overlay2");
+const projectDescription1 = document.querySelector(".project-description1");
+const projectDescription2 = document.querySelector(".project-description2");
 const projectMockup = document.querySelector(".project-mockups");
 (0, _scrollTriggerDefault.default).create({
-    trigger: ".project",
+    trigger: ".project1",
     start: "top center",
     end: "+=1500",
-    onToggle: (self)=>opToggle(projectDescription)
+    onToggle: (self)=>{
+        opToggle(projectDescription1);
+        overlay1.forEach((e)=>{
+            // console.log(e)
+            e.classList.toggle("overlay");
+        });
+    }
+});
+(0, _scrollTriggerDefault.default).create({
+    trigger: ".project2",
+    start: "top center",
+    end: "+=1500",
+    onToggle: (self)=>{
+        opToggle(projectDescription2);
+        overlay2.forEach((e)=>{
+            // console.log(e)
+            e.classList.toggle("overlay");
+        });
+    }
 });
 
 },{"gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","locomotive-scroll":"iDXE3"}],"fPSuC":[function(require,module,exports) {
