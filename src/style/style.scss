@@ -49,14 +49,14 @@ p {
   color: var(--heading-color2);
 
   @media only screen and (max-width: 1400px) {
-    font-size: 24;
+    font-size: 24px;
   }
 
   @media only screen and (max-width: 800px) {
-    font-size: 22;
+    font-size: 22px;
   }
   @media only screen and (max-width: 600px) {
-    font-size: 20;
+    font-size: 20px;
   }
 }
 
@@ -90,7 +90,7 @@ h2 {
   font-family: AvenirHeavy;
 }
 .mt-10 {
-  margin-top: 10px;
+  margin-top: 8px;
   @media only screen and (max-width: 800px) {
     margin-top: 8px;
   }
@@ -111,17 +111,17 @@ h2 {
 .name-svg {
   width: 500px;
   @media only screen and (max-width: 1200px) {
-    width: 450;
+    width: 450px;
   }
 
   @media only screen and (max-width: 800px) {
-    width: 410;
+    width: 410px;
   }
   @media only screen and (max-width: 600px) {
-    width: 370;
+    width: 370px;
   }
   @media only screen and (max-width: 500px) {
-    width: 350;
+    width: 350px;
   }
 }
 
@@ -184,27 +184,27 @@ main {
       position: absolute;
       font-size: 50px;
       font-family: AvenirRoman;
-      transform: translateY(100);
+      transform: translateY(100%);
       animation: p-animation 0.4s ease forwards;
       animation-delay: 2.55s;
 
       @media only screen and (max-width: 1200px) {
-        font-size: 44;
+        font-size: 44px;
       }
 
       @media only screen and (max-width: 800px) {
-        font-size: 40;
+        font-size: 40px;
       }
       @media only screen and (max-width: 600px) {
-        font-size: 34;
+        font-size: 34px;
       }
       @media only screen and (max-width: 500px) {
-        font-size: 28;
+        font-size: 28px;
       }
     }
     @keyframes p-animation {
       0% {
-        transform: translateY(80);
+        transform: translateY(80%);
         opacity: 0;
       }
       100% {
@@ -287,6 +287,7 @@ section.work {
   // margin-bottom: 200px;
   position: relative;
   // background-color: rgba(purple, $alpha: .2);
+  
 }
 .overlay {
   position: relative;
@@ -345,8 +346,10 @@ section.work {
   left: 3vw;
   // padding: 5% 0 0 5%;
   // position: fixed;
+  
   max-width: 40%;
   opacity: 0;
+  pointer-events: none;
   transition: all 0.2s ease;
   @media only screen and (max-width: 1470px) {
     left: 2vw;
@@ -402,7 +405,7 @@ section.work {
 .project-des {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 4px;
   p {
     font-size: 30px;
     font-family: AvenirMedium;
@@ -979,4 +982,5 @@ section.contact {
 }
 .op100 {
   opacity: 100;
+  pointer-events: auto;
 }
