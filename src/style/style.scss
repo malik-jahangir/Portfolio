@@ -756,16 +756,17 @@ section.work {
 //     width: 800px;
 //     // height: 200px;
 // }
-.screenshot-t {
+.screenshot-thejob {
   position: absolute;
 
   border-radius: 2px;
   // right: 100;
   top: 17.5px;
-  left: 99.4px;
+  left: 99.5px;
   width: 604px;
   // z-index: 2;
-  // transform: translateY(-513);
+  // transform: translateY(-180px);
+  // filter: invert(100);
 }
 
 // .project-mockups-tab{
@@ -802,27 +803,27 @@ section.work {
 //     // height: 200px;
 //     // z-index: 10;
 // }
-.screenshot-tab-t {
+.screenshot-tab-thejob {
   position: absolute;
-  top: -470px;
+  top: 16px;
   border-radius: 2px;
   // right: 100;
   left: 18.5px;
   width: 366px;
   z-index: 2;
   // filter:invert(100);
-  // transform: translateY(-672);
+  // transform: translateY(-170px);
 }
-.screenshot-phone-t {
+.screenshot-phone-thejob {
   position: absolute;
-  top: -240px;
+  top: 7px;
   border-radius: 2px;
   // right: 100;
-  left: 8.1px;
+  left: 8px;
   width: 195.5px;
   z-index: 2;
   // filter:invert(100);
-  // transform: translateY(-925);
+  // transform: translateY(-96px);
 }
 ////////////////project3
 .screenshot-c {
@@ -857,6 +858,41 @@ section.work {
   // filter:invert(100);
   // transform: translateY(-30);
 }
+////////////////project4
+.screenshot-trava {
+  position: absolute;
+  top: 18px;
+  border-radius: 2px;
+  // right: 100;
+  left: 99.5px;
+  width: 604px;
+  // z-index: 2;
+  // transform: translateY(-193);
+}
+.screenshot-tab-trava {
+  position: absolute;
+  top: 16px;
+  border-radius: 2px;
+  // right: 100;
+  left: 18.5px;
+  width: 366px;
+  z-index: 2;
+  // filter:invert(100);
+  // transform: translateY(-180);
+}
+.screenshot-phone-trava {
+  position: absolute;
+  top: 7;
+  border-radius: 2px;
+  // right: 12px;
+  left: 7.5px;
+  width: 196px;
+  z-index: 2;
+  // filter:invert(100);
+  // transform: translateY(-30);
+}
+
+
 
 ///////////////////////
 section.skills {
